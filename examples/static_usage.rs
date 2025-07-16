@@ -29,6 +29,7 @@ fn main() {
                 Information::Email => println!("It's an email!"),
                 Information::PhoneNumber => println!("It's a phone!"),
                 Information::Date => println!("It's a date!"),
+                Information::Credential => println!("It's a credential!"),
             }
         }
         Err(e) => println!("Unknown type: {}", e),
