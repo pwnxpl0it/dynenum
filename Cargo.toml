@@ -1,0 +1,27 @@
+[package]
+name = "dynenum"
+version = "0.1.0"
+edition = "2021"
+description = "Dynamic enums from YAML for classification types."
+authors = ["Mohamed Tarek @pwnxpl0it"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/pwnxpl0it/dynenum"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_yaml = "0.9"
+
+[dev-dependencies]
+tempfile = "3"
+
+[build-dependencies]
+serde_yaml = "0.9"
+convert_case = "0.6"
+
+[lib]
+name = "dynenum"
+path = "src/lib.rs"
+
+[features]
+# Enables static enum generation from types.yaml at build time
+static-types = []
