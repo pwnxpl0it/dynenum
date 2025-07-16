@@ -10,7 +10,6 @@ fn handle_information(info: Information) {
         Information::PhoneNumber => println!("Action: Handle phone!"),
         Information::Date => println!("Action: Handle date!"),
         Information::Credential => println!("Action: Handle credential!"),
-    }
 }
 
 fn main() {
@@ -22,7 +21,7 @@ fn main() {
     }
 
     // Parse from string and match
-    let input = "email";
+    let input = "phone_number";
     match Information::from_str(input) {
         Ok(info) => {
             println!("Parsed: {}", info);
@@ -30,7 +29,6 @@ fn main() {
                 Information::Email => println!("It's an email!"),
                 Information::PhoneNumber => println!("It's a phone!"),
                 Information::Date => println!("It's a date!"),
-                Information::Credential => println!("It's a credential!"),
             }
         }
         Err(e) => println!("Unknown type: {}", e),
